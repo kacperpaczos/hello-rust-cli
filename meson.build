@@ -60,10 +60,3 @@ rustc_version = run_command('rustc', '--version', check: true).stdout().strip()
 message(rustc_version)
 
 subdir('src')
-
-gnome.post_install(
-  gtk_update_icon_cache: true,
-  glib_compile_schemas: true,
-  update_desktop_database: true,
-)
-
